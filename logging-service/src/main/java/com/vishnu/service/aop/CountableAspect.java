@@ -20,7 +20,7 @@ import java.util.Map;
 public class CountableAspect {
 
     private final Logger log;
-    private static final Map<String, Integer> countingMap = new HashMap();
+    private static final Map<String, Integer> countingMap = new HashMap<>();
 
     public CountableAspect(String loggerName){
         super();
