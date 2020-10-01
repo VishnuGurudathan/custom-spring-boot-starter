@@ -8,7 +8,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @author : vishnu.g
  * created on : 02/Sep/2020
  */
-@ConfigurationProperties("logging.method.exec")
+@ConfigurationProperties("logging.track")
 public class LoggingProperties {
     private String loggerName = "AuditLogger";
 

@@ -14,10 +14,10 @@ import org.slf4j.LoggerFactory;
  * created on : 02/Sep/2020
  */
 @Aspect
-public class LoggableAspect {
+public class LoggableMethodExecutionTimeAspect {
     private final Logger log;
 
-    public LoggableAspect(String loggerName){
+    public LoggableMethodExecutionTimeAspect(String loggerName){
         super();
         log = LoggerFactory.getLogger(loggerName);
     }

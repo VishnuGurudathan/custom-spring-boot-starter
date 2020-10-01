@@ -1,6 +1,6 @@
 package com.vishnu.boot.logging.autoconfigure;
 
-import com.vishnu.service.aop.LoggableAspect;
+import com.vishnu.service.aop.LoggableMethodExecutionTimeAspect;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -13,18 +13,18 @@ import org.springframework.context.annotation.Configuration;
  * created on : 02/Sep/2020
  */
 @Configuration
-@ConditionalOnClass(LoggableAspect.class)
+@ConditionalOnClass(LoggableMethodExecutionTimeAspect.class)
 @EnableConfigurationProperties(LoggingProperties.class)
-public class LoggingAutoconfigure {
+public class MethodExecutionTimeAutoConfiguration {
 
     private final LoggingProperties properties;
 
-    public LoggingAutoconfigure(LoggingProperties properties) {
+    public MethodExecutionTimeAutoConfiguration(LoggingProperties properties) {
         this.properties = properties;
     }
 
     @Bean
-    public LoggableAspect loggableAspect(){
-        return new LoggableAspect(properties.getLoggerName());
+    public LoggableMethodExecutionTimeAspect loggableMethodExecutionTimeAspect(){
+        return new LoggableMethodExecutionTimeAspect(properties.getLoggerName());
     }
 }
