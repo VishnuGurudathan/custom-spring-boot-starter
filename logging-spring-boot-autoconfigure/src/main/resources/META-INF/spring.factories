@@ -1,1 +1,4 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.vishnu.boot.logging.autoconfigure.LoggingAutoconfigure
+# Auto configure classes.
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.vishnu.boot.logging.autoconfigure.MethodExecutionTimeAutoConfiguration,\
+com.vishnu.boot.logging.autoconfigure.MethodCallCounterAutoConfigure
