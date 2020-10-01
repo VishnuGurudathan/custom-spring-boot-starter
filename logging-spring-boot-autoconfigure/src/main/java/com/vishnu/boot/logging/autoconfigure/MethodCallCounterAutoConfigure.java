@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
  * created on : 03/Sep/2020
  */
 @Configuration
-@ConditionalOnProperty(name = "logging.api.enabled", havingValue = "true", matchIfMissing = true)
+@ConditionalOnProperty(name = "logging.track.count.enable", havingValue = "true", matchIfMissing = true)
 public class MethodCallCounterAutoConfigure {
 
     private final LoggingProperties properties;
